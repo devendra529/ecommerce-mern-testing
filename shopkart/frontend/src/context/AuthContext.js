@@ -1,7 +1,11 @@
+// it is auth context to manage user authentication state across the app, it provides login and logout functions and stores user data
+// it is importent for protecting routes and showing user specific data
+
 import React, { createContext, useState, useContext, useEffect } from 'react';
 
 const AuthContext = createContext(null);
 
+//it is auth provider component
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);

@@ -4,12 +4,14 @@ import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 import './Navbar.css';
 
+// navbar component it can display different link based on user login
 function Navbar() {
   const { user, logout } = useAuth();
   const { totalItems } = useCart();
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
+  //handle logout and redirect to login page
   const handleLogout = () => {
     logout();
     navigate('/login');

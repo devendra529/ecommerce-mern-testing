@@ -1,3 +1,5 @@
+// it is the main app component that sets up routing and context providers for auithentication and cart management
+
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';

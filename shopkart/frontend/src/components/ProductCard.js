@@ -12,7 +12,7 @@ const categoryColors = {
   Sports: '#10b981',
   Home: '#6366f1'
 };
-
+// product card component to display product details and add to cart
 function ProductCard({ product }) {
   const { addToCart } = useCart();
   const { user } = useAuth();
@@ -25,7 +25,7 @@ function ProductCard({ product }) {
     }
     addToCart(product);
   };
-
+//serve different accent color based on product category
   const accentColor = categoryColors[product.category] || '#e8521a';
 
   return (
