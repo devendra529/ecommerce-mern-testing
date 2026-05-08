@@ -1,5 +1,8 @@
+// we define the order schema and model here, which will be used to store order details in the database.
+
 const mongoose = require('mongoose');
 
+// order schema to store order details.
 const orderSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
