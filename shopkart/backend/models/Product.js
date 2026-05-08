@@ -1,5 +1,7 @@
-const mongoose = require('mongoose');
+//Mongoose schema for a Product model, which will be used to store product details in the database.
 
+const mongoose = require('mongoose');
+//Creates a schema named productSchema.
 const productSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -31,6 +33,6 @@ const productSchema = new mongoose.Schema({
     type: Number,
     default: 4.0
   }
-}, { timestamps: true });
+}, { timestamps: true });    // Mongoose automatically adds two fields to every document createdAt and updatedAt
 
 module.exports = mongoose.model('Product', productSchema);
