@@ -113,7 +113,7 @@ cd tests/selenium
 mvn test
 ```
 
-Make sure both backend (port 5000) and frontend (port 3000) are running before executing tests.
+Make sure that both backend (port 5000) and frontend (port 3000) are running before executing tests.
 
 ---
 
