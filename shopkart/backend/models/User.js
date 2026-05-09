@@ -1,6 +1,17 @@
-const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
+/*This is a complete User Model in Node.js + MongoDB + Mongoose with:
 
+1. Schema creation
+2.Validation
+3.Password hashing
+4.Password comparison
+5.Middleware (pre)
+6.Custom methods
+*/
+
+const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');      // Instead store encrypted version of the password in the database
+
+//Creating a schema named userSchema
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
