@@ -1,8 +1,10 @@
+// order.js defines the api end point for creating and fetching orders.
 const express = require('express');
 const router = express.Router();
 const Order = require('../models/Order');
-const { protect } = require('../middleware/auth');
+const { protect } = require('../middleware/auth'); // protect middleware ensures that only authentication user can access these routes.
 
+// @route it creates a new models order and saves it to the database.
 router.post('/', protect, async (req, res) => {
   const { items, totalAmount, shippingAddress } = req.body;
 
